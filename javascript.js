@@ -149,3 +149,16 @@ const numeros = [12,13,14,15];
 //numeros = [30];//esto tira error
 numeros.push(16);
 console.log(numeros);
+
+//OBJETOS:
+const persona = {
+    nombre: 'Juan',
+    edad: 32
+};
+
+persona.edad = 33;
+
+console.log(persona.edad);
+
+persona.pais = "Argentina";
+console.log(persona);

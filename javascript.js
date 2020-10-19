@@ -5,22 +5,16 @@ var numero2 = 20;
 var texto = '40';
 
 //alert(numero);
-
 //alert(numero + numero2);
-
 //alert(numero + texto);
-
 //numero = 2030;
 
-alert(numero);
+//alert(numero);
 
 const num = 1800;
-
 var num2 = num + 1;
-
 //num2++;
 num2--;
-
 console.log(num2);
 
 var nombre = 'Elizabeth';
@@ -82,49 +76,94 @@ switch(hora){
 
 //FUNCIONES:
 
-var numerito1 = 10;
-var numerito2 = 20;
+var numerito1 = 5;
+var numerito2 = 5;
 
-function suma(){
-    return console.log(numerito1 + numerito2);
+function sumaUno(){
+    console.log(numerito1 + numerito2);
 }
+sumaUno();
 
-suma();
-
-function suma(n1, n2){
-    return console.log(n1+n2);
+function sumaDos(n1, n2){
+    console.log(n1+n2);
 }
+sumaDos(10,10);
 
-suma(80,20);
+//FUNCIONES DE FLECHA:
+
+const additionOne = () => {
+    console.log(30);
+}
+additionOne();
+
+const additionTwo = num => {//si solo hay un parámetro, no hace falta colocar los paréntesis
+    console.log(num);
+}
+additionTwo(40);
+
+//con return:
+// const additionThree = (number1, number2) => {
+//     return (number1 + number2);
+// }
+
+//abreviada:
+const additionThree = (number1, number2) => (number1 + number2)
+
+const answer = additionThree(25,25);
+console.log(answer);
+
+//si no recibe parámetros, tengo que escribir los paréntesis:
+const mensaje = () => {
+    return 'Hola, soy Carolina'
+}
+const miNombre = mensaje()
+console.log(miNombre)
+
+//Si solo recibe un parámetro, no necesito los paréntesis:
+// const mensajeDos = nombre => {
+//     return 'Hola, soy ' + nombre
+// }
+
+//abreviada:
+const mensajeDos = nombre => 'Hola, soy ' + nombre
+
+const myName = mensaje('Carolina')
+console.log(myName)
+
+const additionFour = (num) => {
+    console.log(num + 30)
+}
+additionFour(30)
+
+//que pasa si el usuario no envía nada
+//le asigno un valor a num, en caso que no reciba ningún parámetro
+const additionFive = (num=40) => {
+    console.log(num + 30)
+}
+additionFive()
 
 //DIFERENCIAS ENTRE var, let y const:
 
 //var edad = 55;
 //var edad = 60;//debilidad de var: estoy reescribiendo una variable
-
 //console.log(edad);
 
 let edad = 55;
 //let edad = 60;//con let esto no pasa: tira error si declaro la misma variable de nuevo
 
 edad = 100;//no hay problema con cambiarle el valor
-
 console.log(edad);
 
 for(var i=80;i<85;i++){
     console.log(i);
 }
-
 console.log(i);//var i sigue viva fuera del ciclo for
 
 let j=34;//defino j fuera del ciclo for, en el ambiente/scope global
-
 for(let j=80;j<85;j++){//j definida dentro del ambiente/scope del ciclo for
     console.log(j);
 }
-
 //console.log(j);//let j no se encuentra definida fuera del ciclo for
-
 console.log(j);
 
 //En resumen, var existe en cualquier ambiente, pero let no.
@@ -162,3 +201,5 @@ console.log(persona.edad);
 
 persona.pais = "Argentina";
 console.log(persona);
+
+

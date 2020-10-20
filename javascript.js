@@ -142,6 +142,20 @@ const additionFive = (num=40) => {
 }
 additionFive()
 
+//TEMPLATE STRING:
+//${} permite inyectar lógica de Javascript
+// const sumaNumeros = (numUno, numDos) => {
+//     return `El número es: ${numUno + numDos}`
+// }
+// const respuesta = sumaNumeros(40,40)
+// console.log(respuesta)
+
+//versión abreviada:
+const sumaNumeros = (numUno, numDos) => (`El número es: ${numUno + numDos}`)//Los paréntesis después de la flecha también se pueden omitir...
+
+const respuesta = sumaNumeros(40,40)
+console.log(respuesta)
+
 //DIFERENCIAS ENTRE var, let y const:
 
 //var edad = 55;

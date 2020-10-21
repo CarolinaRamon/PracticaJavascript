@@ -142,7 +142,7 @@ const additionFive = (num=40) => {
 }
 additionFive()
 
-//TEMPLATE STRING:
+//TEMPLATE LITERALS (Template strings):
 //${} permite inyectar lógica de Javascript
 // const sumaNumeros = (numUno, numDos) => {
 //     return `El número es: ${numUno + numDos}`
@@ -208,12 +208,20 @@ const persona = {
     nombre: 'Juan',
     edad: 32
 };
-
 persona.edad = 33;
-
 console.log(persona.edad);
-
 persona.pais = "Argentina";
 console.log(persona);
 
-
+const mascota = {
+    nombre: 'Tom',
+    edad: 10,
+    vivo: true,
+    razas: ['persa', 'siames', 'ragdoll']
+}
+console.log(mascota)
+console.log(mascota.nombre)
+//Para asignar un valor fuera del objeto uso el signo igual y no los dos puntos como dentro del objeto:
+mascota.id = 1
+console.log(mascota)
+console.log(mascota.razas[2])

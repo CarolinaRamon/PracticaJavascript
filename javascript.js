@@ -259,3 +259,34 @@ console.log(nombreMascota);
 
 const {edad: edad2} = mascota;//saco la variable de dentro del objeto y hasta le puedo dar otro nombre
 console.log(edad2);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//OBJETOS con objetos en su interior:
+const web = {
+    nombre: 'bluuweb',
+    links: {
+        enlace: 'www.carolina.ar'
+    },
+    redesSociales:{
+        youtube:{
+            enlace:'youtube.com/carolina',
+            nombre: 'carolina.yt'
+        },
+        facebook:{
+            enlace: 'facebook.com/carolina',
+            nombre: 'carolina.fb'
+        }
+    }
+}
+
+console.log(web.redesSociales.youtube.enlace);
+
+//Creo constante:
+const enlaceFB = web.redesSociales.facebook.enlace
+console.log(enlaceFB);
+
+//Otra opción: destructuring object
+const {enlace: enlaceYT, nombre: nombreYT} = web.redesSociales.youtube
+console.log(enlaceYT)
+console.log(nombreYT)

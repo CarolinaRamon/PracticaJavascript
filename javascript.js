@@ -314,11 +314,11 @@ fetch('https://pokeapi.co/api/v2/pokemon')
 //Le pedimos que la respuesta la retorne en formato json (porque vamos a recibir un json)
 
 .then(data=>{
-    console.log(data);
-    console.log(data.results);
-    data.results.forEach(element=>{
-        console.log(element.name);
-    });
+    //console.log(data);
+    //console.log(data.results);
+    // data.results.forEach(element=>{
+    //     console.log(element.name);
+    // });
 })
 //console.log(data.results);
 //data porque le pusimos de nombre data
@@ -328,3 +328,21 @@ fetch('https://pokeapi.co/api/v2/pokemon')
 //Nosotros esperamos una promesa con el .then, pero si falla, para eso tenemos el catch, para "atrapar" los errores:
 .catch(error => console.log(error))
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//ASYNC & AWAIT
+//then se sigue utilizando pero async y await nos ahorran un poco de código
+
+const obtenerPokemones = async() => {
+    try {
+        const res = await fetch('https://pokeapi.co/api/v2/pokemon')//esperamos la petición
+        const data = await res.json()
+        //console.log(data.results)
+        data.results.forEach(element=>{
+            console.log(element.name);
+        })
+    } catch (error) {
+        console.log(error);
+    }
+}
+obtenerPokemones()
